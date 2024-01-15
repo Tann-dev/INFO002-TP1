@@ -31,6 +31,15 @@ python .\main.py --abc=26 --size=4 --load=crack.txt --creer_table_fichier --heig
 python .\main.py --abc=26 --size=4 --load=crack.txt --crack --height=1000000 --width=10 --hash_to_crack=81fe8bfe87576c3ecb22426f8e57847382917acf
 ```
 
+### Question 12
+
+Dans le contexte d'une table arc-en-ciel, la complexité peut être évaluée comme O(log(hauteur) * largeur * largeur).
+
+- La recherche dichotomique présente une complexité de log(hauteur).
+- Il est nécessaire de considérer la dimension de la largeur, car en moyenne, la découverte du hash se produit à la moitié du tableau, sous réserve de sa validité et de sa correspondance avec un mot de passe répertorié dans la table. La largeur (2) intervient car à chaque itération, le recalcul du nouveau candidat à rechercher nécessite (largeur - t) itérations, soit en moyenne largeur/2 itérations.
+- La complexité totale de cette recherche est exprimée comme O(hauteur) en raison du chargement de la table en mémoire.
+- Les autres calculs associés demeurent en temps constant.
+
 ### Question 14
 
 On fait déjà le test pour le premier alphabet avec un mot à quatre caractères.
@@ -110,3 +119,7 @@ python .\main.py --abc=40 --stats --size=5 --height=20000 --width=10000 --crack_
 L'ajout de sel dans le contexte des mots de passe vise à accroître la complexité du processus de hachage, ce qui rend plus difficile la tâche des attaquants cherchant à exploiter des tables arc-en-ciel pour déchiffrer les mots de passe. Le sel implique l'incorporation de caractères aléatoires au mot de passe avant son hachage. Par conséquent, même si deux utilisateurs ont le même mot de passe, le hash résultant sera différent en raison de l'ajout du sel unique.
 
 Cette différenciation des hashs rend inefficace l'utilisation de tables arc-en-ciel, car celles-ci reposent sur la précomputation de couples de mots de passe et de hashs correspondants. En ajoutant du sel, la relation entre un mot de passe et son hash devient spécifique à chaque utilisateur, compromettant ainsi la validité des tables arc-en-ciel précalculées. En résumé, l'utilisation du sel renforce la sécurité en introduisant une variabilité individuelle dans le processus de hachage, dissuadant les attaquants de recourir à des méthodes précalculées pour déchiffrer les mots de passe.
+
+### Bonus
+
+Nous avons ajouté une fonction permettant de choisir la taille minimum et maximum. Ce paramètre est visible dans la commande --custom_help

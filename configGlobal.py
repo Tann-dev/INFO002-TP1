@@ -10,13 +10,27 @@ class ConfigGlobal:
         self.file = "TableArcEnCiel.txt"
 
     def calculateN(self):
+        N = 0
+        if self.tailleMax != None and self.tailleMax != None:
+            for i in range(self.tailleMin, self.tailleMax + 1):
+                N += len(self.alphabet) ** i
+            return N
         return len(self.alphabet) ** self.taille
     
     def i2c(self, wordIndex):
         result = []
         base = len(self.alphabet)
+        taille = self.taille
+        if self.tailleMax != None and self.tailleMax != None:
+            for i in range(self.tailleMin, self.tailleMax + 1):
+                currentSizeN = len(self.alphabet) ** i
+                if wordIndex >= currentSizeN:
+                    wordIndex -= currentSizeN
+                else:
+                    taille = i
+                    break
 
-        for _ in range(self.taille):
+        for _ in range(taille):
             result.insert(0, self.alphabet[wordIndex % base])
             wordIndex //= base
 
@@ -184,6 +198,14 @@ class ConfigGlobal:
 
     def setTaille(self, taille):
         self.taille = int(taille)
+        self.tailleMax = None
+        self.tailleMin = None
+    
+    def setTailleMin(self, taille):
+        self.tailleMin = int(taille)
+
+    def setTailleMax(self, taille):
+        self.tailleMax = int(taille)
     
     def setFile(self, load):
         if load == ".":

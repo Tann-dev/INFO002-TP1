@@ -40,6 +40,8 @@ def getHelp():
     print("Available options:")
     print("  --load=<s>              file to load the rainbow table, must be a txt")
     print("  --size=<i>              number of characters for clear text")
+    print("  --size_min=<i>          min number of characters for clear text")
+    print("  --size_max=<i>          max number of characters for clear text")
     print("  --alphabet=<s>          allowed characters for clear text")
     print("  --abc=<N>               choose standard alphabet:")
     print("         N=26               abcdefghijklmnopqrstuvwxyz (default)")

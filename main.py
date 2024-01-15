@@ -25,6 +25,8 @@ def main():
 
     # Optionnal parameters
     parser.add_argument('--size', type=config.setTaille)
+    parser.add_argument('--size_min', type=config.setTailleMin)
+    parser.add_argument('--size_max', type=config.setTailleMax)
     parser.add_argument('--alphabet', type=config.setAlphabet)
     parser.add_argument('--abc', type=config.setABC)
     parser.add_argument('--load', default=".", type=config.setFile)
