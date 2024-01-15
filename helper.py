@@ -45,7 +45,7 @@ def getHelp():
     print("         N=26               abcdefghijklmnopqrstuvwxyz (default)")
     print("         N=26A              ABCDEFGHIJKLMNOPQRSTUVWXYZ")
     print("         N=36               abcdefghijklmnopqrstuvwxyz0123456789")
-    print("         N=40               abcdefghijklmnopqrstuvwxyz0123456789,;:$")
+    print("         N=40               abcdefghijklmnopqrstuvwxyz0123456789,;:$.")
     print("         N=52               ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")
     print("         N=62               0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")
     print("         N=66               0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz,;:$")

@@ -172,13 +172,13 @@ class ConfigGlobal:
             case "36":
                 self.alphabet = "abcdefghijklmnopqrstuvwxyz0123456789"
             case "40":
-                self.alphabet = "abcdefghijklmnopqrstuvwxyz0123456789,;:$"
+                self.alphabet = "abcdefghijklmnopqrstuvwxyz0123456789,;:$."
             case "52":
                 self.alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
             case "62":
                 self.alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
             case "66":
-                self.alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz,;:$"
+                self.alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz,;:$."
             case _:
                 raise Exception("L'argument pour l'alphabet n'est pas valide. Faites un --custom_help pour plus de détails")
 
